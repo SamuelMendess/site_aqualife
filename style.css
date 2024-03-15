@@ -1,0 +1,397 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body { 
+    background-color: white;
+    font-family: "Fira Sans", sans-serif;
+    color: rgb(255, 255, 255);
+
+}
+
+h1 {
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+      }
+      
+
+.container {
+    background-color: #1FC2D3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 02em;
+}
+
+.right-list {
+    float: right;
+    gap: 60px;
+}
+
+.container h1 {
+    font-family: "Madimi One", sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.container ul {
+        float: right;
+    }
+
+.container ul li {
+    display: inline;
+    margin-left: 2em;
+    
+}
+
+.container ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    position: relative;
+    padding-bottom: 0.4em;
+}
+
+.container ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color:#15384C;
+    transition: width 0.3s ease;
+}
+
+.container ul li a:hover::after {
+    width: 100%;
+}
+
+#banner {
+    background-image: url(./img/banner.png);
+    background-position: center;
+    background-size: 100vw;
+    height: 42em;
+    background-repeat: no-repeat;
+    background-color:#ECFCFB;
+
+}
+
+.container-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 8em;
+    margin-left: 18em;
+    width: 40vw;
+}
+
+.container-banner h1 {
+    color: #ffffff;
+    font-size: 4.3rem;
+    line-height: 0.89em;
+}
+
+.container-banner h2 {
+    border-left: 6px solid #FE7F47;
+    margin-left: 4px;
+    padding-left: 5px;
+    margin-top: 1.7em;
+    font-size: 1rem;
+    font-weight: 400; 
+}
+/* botoes banner e sobre nós */
+.container-banner button,
+.container-about button {
+    margin-top: 2em;
+    width: 15em;
+    background-color: transparent;
+    border: 2px #FE7F47 solid;
+    padding: 1em;
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+    z-index: 4;
+}
+
+.container-banner button a,
+.container-about button a {
+    text-decoration: none;
+}
+
+.container-banner button a{
+    color: #ffffff;
+}
+
+.container-about button a{
+    color: #15384C;
+}
+
+.container-banner button::before,
+.container-about button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: #FE7F47;
+    transition: right 0.6s ease;
+    z-index: -1;
+}
+
+.container-banner button:hover::before,
+.container-about button:hover::before {
+    right: 0;
+}
+
+#about {
+    padding: 7em 20em;
+}
+
+.container-about {
+    display: flex;
+}
+
+.container-about__text {
+    color: #15384C;
+    display: flex;
+    flex-direction: column;
+    margin-right: 4em;
+}
+
+.container-about__text h1 {
+    font-size: 3rem;
+    line-height: 0.9em;
+    margin-bottom: 1em;
+}
+
+.container-about__text h4, 
+#services h4 {
+    color: blue;
+    border-left: 6px solid #FE7F47;
+    margin-left: 4px;
+    padding-left: 5px;
+    margin-bottom: .5em;
+}
+
+.container-about__firstp {
+    font-size: 1.3em;
+    margin-bottom: 1em;
+    font-style: italic;
+}
+
+
+.container-about button {
+    margin-top: 4em;
+}
+
+#services {
+    padding: 7em 10em;
+    display: flex;
+    flex-direction: column;
+}
+
+#services h4 {
+    margin-bottom: 1em;
+}
+
+.container-services {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.services-card {
+    display: flex;
+    flex-direction: row;
+    background-color: #15384C;
+    margin-right: 2.5em;
+    margin-bottom: 2.5rem;
+    flex: 1 0 20%;
+}
+
+.services-card img {
+    height: 300px;
+    width: 370px;
+}
+
+.services-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.9em;
+}
+
+.services-text h1 {
+    color: #FE7F47;
+}
+
+.services-text p {
+    color: gray;
+}
+
+.services-text h5 {
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-size: .8em;
+    margin-top: 1em;
+}
+
+#contact {
+    padding: 2em 0;
+    margin-bottom: 10em;
+}
+
+.container-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-contact_form h1 {
+    color: #15384C;
+    font-size: 4rem;
+    margin-bottom: 1em;
+    position: relative;
+    line-height: 2.3em;
+    text-align: center;
+}
+
+.container-contact__form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form::placeholder {
+    font-family: sans-serif;
+}
+
+form input,
+form textarea {
+    display: flex;
+    width: 50em;
+    margin-bottom: 1em;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    color: #15384C;
+}
+
+form textarea {
+    resize: none;
+    height: 10em;
+}
+
+form button {
+    margin-top: 2em;
+    padding: 1em;
+    text-align: center;
+    width: 13em;
+    background-color: #FE7F47;
+    border-radius: 7px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+form button:hover {
+    background-color: #15384C;
+}
+
+form :focus, textarea:focus {
+    outline: none;
+}
+
+
+
+.container-footer{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 4em;
+    background-color: #c5e7efe2;
+    color: #15384C;
+}
+
+.container-footer > div {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    min-height: 150px;
+}
+
+
+.container-footer img{
+    width: 1.5em;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+.container-footer h2,
+.container-footer p{
+    text-align: center;
+}
+
+.container-footer-copy {
+    font-family: "Madimi One", sans-serif;
+    font-size: 14px;
+    color: #000;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1705px){
+    .container-hero{
+        margin-left: 10em;
+        width: 55vw;
+    }
+
+    #about{
+        padding: 7em 13em;
+    }
+
+    .services-card img{
+        height: auto;
+        width: 200px;
+    }
+}
+
+@media (max-width:1240px) {
+    .container-hero{
+        margin-left: 8em;
+        width: 60vw;
+    }
+
+    #about{
+        padding: 7em 7em;
+    }
+
+    .services-card img{
+        height: auto;
+        width: 120px;
+    }
+}
+
+.copy{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #000;
+    text-align: center;
+}
